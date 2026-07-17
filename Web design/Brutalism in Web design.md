@@ -66,3 +66,59 @@ If your brand values **directness, functionality, and a rebellious spirit**.
 [Typical Organization.](https://www.typical-organization.com/) The site is styled like a list, ordered by dates. The colors used are mainly black and white. The site is concise and devoid of distracting details.
 
 [Stedelijk Museum website.](https://www.stedelijk.nl/en) A web resource of the Amsterdam Museum of Modern Art, made in a brutal style. Large letters, classic colors, strict horizontal lines.
+
+[Craigslist.](https://www.craigslist.org/) The most famous accidental brutalist website — plain HTML, no decoration, pure function. Started in 1995 and has barely changed since.
+
+[Drudge Report.](https://www.drudgereport.com/) News aggregator that has used the same raw, typographic brutalist layout for decades.
+
+[Hacker News.](https://news.ycombinator.com/) Y Combinator's link-sharing community — minimal CSS, monospaced type, visible structure.
+
+[Bloomberg Businessweek.](https://www.businessweek.com/) In certain editions and campaigns, Bloomberg embraces oversized typography and grid-breaking layouts that are explicitly brutalist.
+
+---
+
+### **Interactive CodePen Examples**
+
+Live brutalist web design experiments and code playgrounds:
+
+| Project | Author | Description |
+|---|---|---|
+| [BRUTALISM Kalmix](https://codepen.io/) | Kalmix | Full brutalist layout with raw typography |
+| [Brutalism - An architectural insight](https://codepen.io/) | Phil S | Educational brutalist page design |
+| [Brutalism Hero Banner Sketch](https://codepen.io/) | Artem | Daily sketch exploring brutalist hero sections |
+| [Genuary_23 Inspired by brutalism](https://codepen.io/) | Paul | Generative art with brutalist grid logic |
+| [brutalism](https://codepen.io/) | Gasoil Gfx | Raw CSS brutalist experiment |
+
+---
+
+### **How to Build a Brutalist Website**
+
+A quick guide to the essentials:
+
+**HTML Structure**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BRUTALIST SITE</title>
+  <style>
+    body { font-family: Times New Roman, serif; background: #fff; color: #000; margin: 0; padding: 20px; }
+    h1 { font-size: 5vw; text-transform: uppercase; border-bottom: 4px solid #000; }
+    a { color: #000; }
+    img { width: 100%; display: block; }
+  </style>
+</head>
+<body>
+  <h1>RAW. HONEST. FUNCTIONAL.</h1>
+  <p>No decoration. No compromise.</p>
+</body>
+</html>
+```
+
+**Key CSS Principles**
+- Use `border` instead of shadows.
+- Use `font-family: monospace` or system fonts.
+- Use `background: #fff` and `color: #000` — high contrast.
+- No `border-radius` — corners are square.
+- No transitions or animations — or use them aggressively.
+- Let the grid show: `outline: 1px solid red` on layout elements during development.
