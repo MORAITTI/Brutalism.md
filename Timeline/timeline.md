@@ -13,6 +13,8 @@ A chronological map of key events, buildings, publications, and movements in the
 | **1928** | CIAM (Congrès Internationaux d'Architecture Moderne) founded — the institutional home of modernism |
 | **1947** | Le Corbusier begins *Unité d'Habitation*, Marseille — the first fully realized béton brut building |
 
+<img src="https://avatars.mds.yandex.net/i?id=48743e8f3948c42a2644dfe9c2e5a057_l-4432102-images-thumbs&n=13"/>
+
 ---
 
 ## **Birth of Brutalism (1950s)**
@@ -24,6 +26,8 @@ A chronological map of key events, buildings, publications, and movements in the
 | **1954** | Smithson's Hunstanton School, Norfolk — first British brutalist building |
 | **1955** | USSR: Khrushchev's decree against "excess in construction" launches mass concrete housing |
 | **1958** | First Soviet *khrushchevka* mass-production begins |
+
+<img src="https://img.ixbt.site/live/images/original/08/11/28/2024/02/18/100dc96ba5.jpg"/>
 
 ---
 
@@ -37,6 +41,8 @@ A chronological map of key events, buildings, publications, and movements in the
 | **1966** | Reyner Banham publishes *The New Brutalism: Ethic or Aesthetic?* — the definitive critical text |
 | **1967** | Habitat 67, Montreal — Moshe Safdie's modular brutalist housing for Expo 67 |
 | **1968** | Trellick Tower, London begins construction (completed 1972) |
+
+<img src="https://avatars.mds.yandex.net/i?id=383abfed56a285edcf354e8e483d9691_l-8162448-images-thumbs&n=13"/>
 
 ---
 
