@@ -2,6 +2,8 @@
 
 A reference guide to core terminology used in the study of brutalism across architecture, design, and culture.
 
+<img src="https://i.pinimg.com/736x/cf/2e/69/cf2e6945e1a33a8dea001043fc14a8c4.jpg"/>
+
 ---
 
 ## A
