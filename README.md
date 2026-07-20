@@ -17,7 +17,7 @@
 | [Brutalism in Fashion](brutalism%20in%20fashion/brutalism%20in%20fashion.md) | Wearable concrete — brutalist designers |
 | [Defenders & Critics](defenders%20and%20critics/defenders%20and%20critics.md) | The brutalism debate: who loved it and who didn't |
 | [Timeline](Timeline/timeline.md) | Chronological history from 1923 to present |
-| [Glossary](glossary/glossary.md) | Key terms and concepts |
+| [Glossary](Glossary/glossary.md) | Key terms and concepts |
 | [Sources](sources.md) | References and further reading |
 | [Contributing](CONTRIBUTING.md) | How to contribute to this repository |
 
