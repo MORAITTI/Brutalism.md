@@ -2,7 +2,7 @@
 
 Typography, like architecture, can be brutal. Brutalist type design rejects the refinements of humanist calligraphy, optical kerning, and delicate spacing in favor of force, weight, and confrontation. The letter as a concrete block.
 
-<img src="https://i.pinimg.com/736x/d1/e2/f3/d1e2f3a4b5c6d1e2f3a4b5c6d1e2f3a4.jpg"/>
+<img src="https://pin.it/2LuegFTw8"/>
 
 ---
 
