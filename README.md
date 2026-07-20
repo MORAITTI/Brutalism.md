@@ -1,4 +1,27 @@
-# **Brutalism in Design: Raw Aesthetics and Functionality**  
+# **Brutalism in Design: Raw Aesthetics and Functionality**
+
+## **Table of Contents**
+
+| Section | Description |
+|---|---|
+| [Brutalism](Brutalism/Brutalism.md) | Core overview of brutalism in architecture |
+| [Brutalism in Moscow Architecture](Brutalism%20in%20Moscow%20architecture/10%20buildings.md) | 10 key brutalist buildings in Moscow |
+| [Soviet Brutalism](Soviet%20Brutalism/Soviet%20Modernism.md) | Soviet modernism and its brutalist legacy |
+| [Web Design](Web%20design/Brutalism%20in%20Web%20design.md) | Brutalism in digital and web design |
+| [Digital Chaos](Digital%20Chaos/Digital%20Chaos.md) | Brutalism in poster and graphic design |
+| [Brutalism in Monochrome](brutalism%20in%20monochrome/brutalism%20in%20monochrome.md) | Monochrome brutalist photography and aesthetics |
+| [Books](books/books.md) | Essential reading on brutalism |
+| [Brutalism in Music](brutalism%20in%20music/brutalism%20in%20music.md) | Industrial, noise, and the brutalist sound |
+| [Brutalism in Cinema](brutalism%20in%20cinema/brutalism%20in%20cinema.md) | Brutalist architecture on screen |
+| [Brutalism in Typography](brutalism%20in%20typography/brutalism%20in%20typography.md) | Raw type, weight, and structural fonts |
+| [Brutalism in Fashion](brutalism%20in%20fashion/brutalism%20in%20fashion.md) | Wearable concrete — brutalist designers |
+| [Defenders & Critics](defenders%20and%20critics/defenders%20and%20critics.md) | The brutalism debate: who loved it and who didn't |
+| [Timeline](timeline/timeline.md) | Chronological history from 1923 to present |
+| [Glossary](glossary/glossary.md) | Key terms and concepts |
+| [Sources](sources.md) | References and further reading |
+| [Contributing](CONTRIBUTING.md) | How to contribute to this repository |
+
+---
 
 ## **Introduction**  
 Brutalism (from the French *béton brut*, meaning "raw concrete") is a movement in architecture and design characterized by massive forms, exposed structures, rough textures, and a lack of ornamentation. Emerging in the mid-20th century as part of modernism, brutalism is now experiencing a revival, particularly in digital and graphic design.  
