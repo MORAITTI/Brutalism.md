@@ -107,7 +107,7 @@ Le Corbusier did not build in Britain, but his philosophy of "architecture for t
 ---
 
 **National Medical Research Center of Oncology named after N. N. Blokhin, Moscow**
-<img src="https://kherson-news.ru/img/20230309/b49ea46c71023ac1b170fadcf64deada_o.jpg"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Zgrada_VMA_%281%29.jpg/800px-Zgrada_VMA_%281%29.jpg?20161020203316"/>
 
 ---
 
