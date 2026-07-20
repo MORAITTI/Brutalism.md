@@ -112,7 +112,7 @@ Le Corbusier did not build in Britain, but his philosophy of "architecture for t
 ---
 
 **Military Medical Academy in Belgrade, Serbia, 1981**
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Zgrada_VMA_%281%29.jpg/800px-Zgrada_VMA_%281%29.jpg?20161020203316"/>
+<img src="https://avatars.mds.yandex.net/i?id=93a5ee971d8867eade71b8185855f559_l-4314181-images-thumbs&n=13"/>
 
 ---
 
