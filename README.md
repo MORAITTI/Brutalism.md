@@ -19,7 +19,7 @@
 | [Timeline](Timeline/timeline.md) | Chronological history from 1923 to present |
 | [Glossary](Glossary/glossary.md) | Key terms and concepts |
 | [Sources](sources.md) | References and further reading |
-| [Contributing](CONTRIBUTING.md) | How to contribute to this repository |
+<!--| [Contributing](CONTRIBUTING.md) | How to contribute to this repository |-->
 
 ---
 
