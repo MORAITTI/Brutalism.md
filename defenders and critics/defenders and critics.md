@@ -3,6 +3,8 @@
 
 No architectural movement has been more divisively loved and hated than brutalism. Below are the central arguments from both sides — the people who championed it, the people who condemned it, and why the debate still matters today.
 
+<img src="https://i.pinimg.com/vwebp/736x/35/68/f8/3568f878e81761288fddb1cedfdbd0c8.webp"/>
+
 ---
 
 ## **The Defenders**
