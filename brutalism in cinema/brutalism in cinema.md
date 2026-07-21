@@ -13,6 +13,8 @@ Brutalist buildings have appeared in films not merely as backdrops, but as activ
 - **Texture richness** — raw concrete, shadow, and light create a cinematographer's dream.
 - **Scale** — wide-angle shots of brutalist estates communicate mass, power, and isolation.
 
+<img src="https://i.pinimg.com/736x/5d/70/06/5d70063b1977d7e3ff5e20a98ea9e9a3.jpg"/>
+
 ---
 
 ## **2. Landmark Films with Brutalist Aesthetics**
