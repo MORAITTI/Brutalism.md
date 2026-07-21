@@ -2,8 +2,6 @@
 
 Brutalism as a philosophy — the rejection of ornamentation, the embrace of raw material, and the celebration of functional form — finds a powerful echo in music. Long before architects stopped plastering over concrete, composers and producers were tearing away the decorative layers of sound.
 
-<img src="https://i.pinimg.com/736x/3e/4a/2c/3e4a2c6e7e1a1f7e2b2c6e7e1a1f7e2b.jpg"/>
-
 ---
 
 ## **1. Industrial Music: The First Brutalist Sound**
@@ -18,6 +16,8 @@ Industrial music, emerging in the late 1970s with acts like **Throbbing Gristle*
 
 **Einstürzende Neubauten** (German for *"Collapsing New Buildings"*) practically named themselves after brutalist demolition. Their early records feature pneumatic drills, metal scaffolding, and factory noise as primary instruments.
 
+<img src="https://i.pinimg.com/vwebp/736x/24/a6/6b/24a66b1a4731f5bcb3c6331ced510e9b.webp"/>
+
 ---
 
 ## **2. Noise Music and Harsh Aesthetics**
@@ -27,6 +27,8 @@ Japanese **Noise** (Japanoise) artists like **Merzbow** and **Masami Akita** app
 - No compromise with listener comfort.
 - Pure texture and density over structure.
 - The aesthetic of **béton brut** — raw, unprocessed signal.
+
+<img src="https://i.pinimg.com/vwebp/1200x/5e/6a/c4/5e6ac450eac9b690a556481106ffca4a.webp"/>
 
 ---
 
@@ -39,6 +41,8 @@ Dark ambient as a genre often draws directly from the visual vocabulary of Sovie
 - Decay textures — crumbling concrete rendered in granular synthesis.
 - Silence as structural element, the way empty space defines brutalist buildings.
 
+<img src="https://i.pinimg.com/736x/ff/13/83/ff1383cb7e1c700c4aa46fe4cd574855.jpg"/>
+
 ---
 
 ## **4. Electronic Music: Techno and the Factory**
@@ -49,6 +53,8 @@ Berlin Techno, born in converted power stations and bunkers (*Tresor*, *Berghain
 - Grid-based, repetitive, monumental.
 - Function over beauty.
 - The body as material to be processed.
+
+<img src="https://i.pinimg.com/736x/6c/9e/3a/6c9e3a2cf6d6a331b7e3a051e19e5000.jpg"/>
 
 ---
 
