@@ -36,6 +36,8 @@ While set in a mountain hotel, Kubrick's spatial compositions borrow directly fr
 ### **Jubilee (1978) — Derek Jarman**
 Punk-era Britain shot against decaying brutalist estates, creating a visual manifesto of collapse and rebellion.
 
+<img src="https://i.pinimg.com/1200x/32/7e/fc/327efc523d33675371c9eb0fc2f6bfd7.jpg"/>
+
 ---
 
 ## **3. Soviet Cinema and Brutalist Spaces**
@@ -45,6 +47,8 @@ Soviet cinema of the 1960s–80s was inevitably shot in brutalist environments:
 - **Stalker (1979) — Andrei Tarkovsky** — industrial ruins, concrete tunnels, the Zone as brutalist metaphor.
 - **Kin-dza-dza! (1986) — Georgy Danelia** — absurdist sci-fi with brutalist visual logic.
 - **The Mirror (1975) — Andrei Tarkovsky** — concrete blocks as memory and history.
+
+<img src="https://i.pinimg.com/vwebp/1200x/95/eb/fc/95ebfc755d153f1cc19fdff6bf7a9ba0.webp"/>
 
 ---
 
