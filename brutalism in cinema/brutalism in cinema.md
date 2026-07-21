@@ -2,7 +2,7 @@
 
 Brutalist buildings have appeared in films not merely as backdrops, but as active participants — shaping mood, power dynamics, and the inner lives of characters. The concrete mass, exposed structure, and inhuman scale of brutalism translate powerfully to the screen.
 
-<img src="https://i.pinimg.com/736x/a1/b2/c3/a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4.jpg"/>
+<img src="https://i.pinimg.com/1200x/03/01/d7/0301d7ae34183f336b5d70de68ab1d5f.jpg"/>
 
 ---
 
