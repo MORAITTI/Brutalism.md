@@ -2,7 +2,7 @@
 
 Fashion, like architecture, can be brutal. A lineage of designers has applied brutalist logic — weight, rawness, structural honesty, the rejection of ornament — to clothing and footwear. These are garments that do not flatter; they impose.
 
-<img src="https://i.pinimg.com/736x/f1/e2/d3/f1e2d3c4b5a6f1e2d3c4b5a6f1e2d3c4.jpg"/>
+<img src="https://i.pinimg.com/vwebp/1200x/60/ec/ba/60ecba24fb70ee0161e9118c08fe4901.webp"/>
 
 ---
 
@@ -31,6 +31,8 @@ If there is one designer who embodies brutalist fashion most completely, it is R
 
 Her 1982 Paris debut was called "Hiroshima chic" by hostile press — and thereby accidentally named the confrontational aesthetic she was pioneering.
 
+<img src="https://i.pinimg.com/1200x/7a/78/df/7a78df8918c43c38dab455b21234b16f.jpg"/>
+
 ### **Martin Margiela (Maison Margiela)**
 Margiela's defining contribution: the **inside out**. He reversed garments so their construction — the seams, the basting threads, the interfacing — became the external surface. Pure tectonic honesty.
 
@@ -40,6 +42,8 @@ Key gestures:
 - White label with numbers replacing the brand name — anonymity over signature.
 - Clothes photographed on headless, identity-free models.
 
+<img src="https://i.pinimg.com/vwebp/1200x/64/7c/ae/647caef35ab4b3d1e3605575095e7102.webp"/>
+
 ### **Rick Owens**
 Owens works with volume and weight to create garments that suggest architecture more than dressing:
 
@@ -48,16 +52,22 @@ Owens works with volume and weight to create garments that suggest architecture 
 - Palette: black, white, grey, bone. Rarely anything else.
 - Footwear designed with the weight and angularity of construction materials.
 
+<img src="https://i.pinimg.com/vwebp/1200x/08/d4/a2/08d4a2f061c9c4162fbf3d27ea5f3039.webp"/>
+
 ### **Helmut Lang**
 Lang's brutalism was more restrained — minimalist, industrial:
 - Transparent industrial materials (PVC, nylon) used as fabric.
 - Exposed construction hardware (zippers as decoration, not fastening).
 - Medical and technical references.
 
+<img src="https://i.pinimg.com/1200x/1d/55/23/1d5523ec2323e6b26de8eee53ff48c7a.jpg"/>
+
 ### **Ann Demeulemeester**
 - Long, fluid structures with structural weight.
 - The layered draped form as architecture.
 - Palette: black, white, ivory.
+
+<img src="https://i.pinimg.com/vwebp/1200x/e0/42/56/e0425601a88b1208088f749798f4333c.webp"/>
 
 ---
 
@@ -73,6 +83,8 @@ Footwear has its own brutalist tradition, where the shoe becomes a concrete bloc
 | **Prada** (industrial era) | Nylon as anti-luxury material |
 | **Yohji Yamamoto** | Volume displaced downward into footwear |
 
+<img src="https://i.pinimg.com/736x/64/4d/66/644d66af6087d914ee5b89e78a15a0a0.jpg"/>
+
 ---
 
 ## **4. Brutalism in Soviet and Russian Fashion**
@@ -86,6 +98,8 @@ Contemporary Russian designers like **Gosha Rubchinskiy** (now Rubchinsky+Karins
 - Working-class Soviet sportswear as high fashion.
 - Crumbling concrete courtyards as runway.
 - Typography taken directly from Soviet packaging.
+
+<img src="https://i.pinimg.com/736x/ff/6c/e6/ff6ce611828d9346b3ff0ab5145f140a.jpg"/>
 
 ---
 
