@@ -11,10 +11,10 @@
 | [Digital Chaos](Digital%20Chaos/Digital%20Chaos.md) | Brutalism in poster and graphic design |
 | [Brutalism in Monochrome](brutalism%20in%20monochrome/brutalism%20in%20monochrome.md) | Monochrome brutalist photography and aesthetics |
 | [Books](books/books.md) | Essential reading on brutalism |
-| [Brutalism in Music](brutalism%20in%20music/brutalism%20in%20music.md) | Industrial, noise, and the brutalist sound |
+| [Brutalism in Music](Brutalism%20in%20music/brutalism%20in%20music.md) | Industrial, noise, and the brutalist sound |
 | [Brutalism in Cinema](Brutalism%20in%20cinema/brutalism%20in%20cinema.md) | Brutalist architecture on screen |
 | [Brutalism in Typography](brutalism%20in%20typography/brutalism%20in%20typography.md) | Raw type, weight, and structural fonts |
-| [Brutalism in Fashion](brutalism%20in%20fashion/brutalism%20in%20fashion.md) | Wearable concrete — brutalist designers |
+| [Brutalism in Fashion](Brutalism%20in%20fashion/brutalism%20in%20fashion.md) | Wearable concrete — brutalist designers |
 | [Defenders & Critics](defenders%20and%20critics/defenders%20and%20critics.md) | The brutalism debate: who loved it and who didn't |
 | [Timeline](Timeline/timeline.md) | Chronological history from 1923 to present |
 | [Glossary](Glossary/glossary.md) | Key terms and concepts |
