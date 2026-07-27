@@ -161,11 +161,11 @@
 
     /* Стили для списка статей */
     #repo-list {
-      margin-top: 2rem;
+      margin-top: 1rem;
       font-weight: 300;
       letter-spacing: 1px;
       line-height: 2.2;
-      max-height: 50vh;
+      max-height: 60vh;
       overflow-y: auto;
       font-family: 'Courier New', monospace;
     }
@@ -197,9 +197,21 @@
       font-family: 'Courier New', monospace;
       font-size: 0.9rem;
       opacity: 0.9;
-      max-height: 50vh;
+      max-height: 60vh;
       overflow-y: auto;
       padding: 0.5rem;
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 0.5rem;
+      background: #222;
+      border: 2px solid #A84342;
+      color: #d6d0c4;
+      font-weight: 300;
+      letter-spacing: 2px;
+      margin-top: 1rem;
+      font-family: 'Courier New', monospace;
     }
 
     .footer {
@@ -223,7 +235,7 @@
       .scene:nth-child(4) .block { grid-column: span 12; }
       /* Новая сцена: блоки друг под другом */
       .scene:nth-child(6) .block { grid-column: span 12 !important; }
-      #repo-list { max-height: 30vh; }
+      #repo-list { max-height: 40vh; }
       #article-content { max-height: 40vh; }
     }
   </style>
@@ -310,13 +322,13 @@
     </div>
   </section>
 
-  <!-- ===== СЦЕНА 6 – СТАТЬИ ИЗ РЕПОЗИТОРИЯ ===== -->
+  <!-- ===== СЦЕНА 6 – СТАТЬИ ИЗ РЕПОЗИТОРИЯ (ОПТИМИЗИРОВАННАЯ) ===== -->
   <section class="scene" style="border-bottom:4px solid #2a2a2a;">
     <div class="block">
       <div class="brutal-text" style="font-size:clamp(1.8rem,4vw,3rem);">РЕПОЗИТОРИЙ</div>
       <div class="meta" style="width:100%;">📂 /Brutalism.md</div>
+      <input type="text" id="searchInput" placeholder="фильтр..." />
       <div id="repo-list">
-        <!-- список подгружается динамически -->
         <div style="opacity:0.4;">загрузка...</div>
       </div>
     </div>
@@ -357,19 +369,26 @@
         });
       });
 
-      // ---- 2. ПАРАЛЛАКС ----
+      // ---- 2. ПАРАЛЛАКС (оптимизированный через requestAnimationFrame) ----
       const scenes = document.querySelectorAll('.scene');
+      let ticking = false;
       window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        scenes.forEach((scene, i) => {
-          const speed = 0.05 + (i * 0.02);
-          const offset = scrollY * speed;
-          const blocks = scene.querySelectorAll('.block');
-          blocks.forEach((block, j) => {
-            const dir = (j % 2 === 0) ? 1 : -1;
-            block.style.transform = `translateY(${offset * dir * 0.3}px)`;
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const scrollY = window.scrollY;
+            scenes.forEach((scene, i) => {
+              const speed = 0.05 + (i * 0.02);
+              const offset = scrollY * speed;
+              const blocks = scene.querySelectorAll('.block');
+              blocks.forEach((block, j) => {
+                const dir = (j % 2 === 0) ? 1 : -1;
+                block.style.transform = `translateY(${offset * dir * 0.3}px)`;
+              });
+            });
+            ticking = false;
           });
-        });
+          ticking = true;
+        }
       });
 
       // ---- 3. ОБРУШЕНИЕ ----
@@ -417,7 +436,7 @@
       setInterval(updateClock, 1000);
       updateClock();
 
-      // ---- 6. ДИНАМИЧЕСКАЯ ТИПОГРАФИКА ----
+      // ---- 6. ДИНАМИЧЕСКАЯ ТИПОГРАФИКА (реже) ----
       setInterval(() => {
         const texts = document.querySelectorAll('.brutal-text');
         texts.forEach(el => {
@@ -425,9 +444,9 @@
             el.style.letterSpacing = (Math.random() * 10 - 5) + 'px';
           }
         });
-      }, 3000);
+      }, 8000); // было 3000 – увеличили
 
-      // ---- 7. ТАНЦУЮЩИЕ ГЛИФЫ ----
+      // ---- 7. ТАНЦУЮЩИЕ ГЛИФЫ (реже) ----
       setInterval(() => {
         const glyphs = document.querySelectorAll('.glyph');
         glyphs.forEach(g => {
@@ -435,60 +454,95 @@
           g.textContent = symbols[Math.floor(Math.random() * symbols.length)];
           g.style.transform = `rotate(${Math.random()*60-30}deg)`;
         });
-      }, 2000);
+      }, 5000); // было 2000 – увеличили
 
-      // ---- 8. ЗАГРУЗКА СТАТЕЙ ИЗ РЕПОЗИТОРИЯ (НОВЫЙ КОД) ----
+      // ---- 8. ЗАГРУЗКА РЕПОЗИТОРИЯ (ОПТИМИЗИРОВАННАЯ) ----
       (async function loadRepo() {
         const repoOwner = 'MORAITTI';
         const repoName = 'Brutalism.md';
-        // Ветка – обычно 'main' или 'master'. Проверьте свою основную ветку.
-        const branch = 'main'; 
+        const branch = 'main';
 
         const listContainer = document.getElementById('repo-list');
         const contentContainer = document.getElementById('article-content');
+        const searchInput = document.getElementById('searchInput');
+
+        let allItems = [];
 
         try {
-          // 1. Получаем содержимое корня репозитория
-          const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/`);
-          if (!response.ok) throw new Error('Ошибка загрузки списка');
-          const items = await response.json();
+          // Кэш
+          const cacheKey = `repo_${repoOwner}_${repoName}`;
+          let cachedData = localStorage.getItem(cacheKey);
+          let items = null;
 
-          // 2. Фильтруем только .md файлы (можно убрать фильтр для всех файлов)
-          const mdFiles = items.filter(item => item.type === 'file' && item.name.endsWith('.md'));
+          if (cachedData) {
+            const parsed = JSON.parse(cachedData);
+            if (parsed.timestamp && (Date.now() - parsed.timestamp < 5 * 60 * 1000)) {
+              items = parsed.data;
+            }
+          }
 
-          if (mdFiles.length === 0) {
+          if (!items) {
+            // Запрос всего дерева (рекурсивно)
+            const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/trees/${branch}?recursive=1`);
+            if (!response.ok) throw new Error('Ошибка загрузки репозитория');
+            const tree = await response.json();
+            items = tree.tree.filter(item => item.type === 'blob' && item.path.endsWith('.md'));
+            // Сохраняем в кэш
+            localStorage.setItem(cacheKey, JSON.stringify({ data: items, timestamp: Date.now() }));
+          }
+
+          allItems = items;
+
+          if (allItems.length === 0) {
             listContainer.innerHTML = '<div style="opacity:0.4;">📭 нет .md файлов</div>';
             return;
           }
 
-          // 3. Строим список
-          const listHtml = mdFiles.map(file => `
-            <div class="repo-item" data-url="${file.download_url}" data-name="${file.name}">
-              <span class="arrow">▸</span> ${file.name.replace('.md', '')}
-            </div>
-          `).join('');
-          listContainer.innerHTML = listHtml;
-
-          // 4. Обработка клика по элементу списка
-          listContainer.querySelectorAll('.repo-item').forEach(el => {
-            el.addEventListener('click', async function() {
-              const url = this.dataset.url;
-              const name = this.dataset.name;
-              contentContainer.innerHTML = `<span style="opacity:0.4;">загрузка ${name}...</span>`;
-              try {
-                const res = await fetch(url);
-                if (!res.ok) throw new Error('Не удалось загрузить статью');
-                const text = await res.text();
-                // Показываем как есть (можно потом подключить markdown-парсер)
-                contentContainer.innerHTML = text;
-              } catch (e) {
-                contentContainer.innerHTML = `<span style="color:#A84342;">⚠️ ошибка загрузки</span>`;
-              }
+          // Функция рендеринга списка
+          function renderList(filter = '') {
+            const filtered = allItems.filter(item => item.path.toLowerCase().includes(filter.toLowerCase()));
+            if (filtered.length === 0) {
+              listContainer.innerHTML = '<div style="opacity:0.4;">ничего не найдено</div>';
+              return;
+            }
+            const html = filtered.map(file => `
+              <div class="repo-item" data-url="https://raw.githubusercontent.com/${repoOwner}/${repoName}/${branch}/${file.path}" data-name="${file.path}">
+                <span class="arrow">▸</span> ${file.path}
+              </div>
+            `).join('');
+            listContainer.innerHTML = html;
+            // Перепривязываем обработчики
+            listContainer.querySelectorAll('.repo-item').forEach(el => {
+              el.addEventListener('click', loadArticle);
             });
+          }
+
+          // Загрузка содержимого статьи
+          async function loadArticle() {
+            const url = this.dataset.url;
+            const name = this.dataset.name;
+            contentContainer.innerHTML = `<span style="opacity:0.4;">загрузка ${name}...</span>`;
+            try {
+              const res = await fetch(url);
+              if (!res.ok) throw new Error('Не удалось загрузить');
+              const text = await res.text();
+              // Ограничиваем вывод (первые 5000 символов)
+              const truncated = text.length > 5000 ? text.slice(0, 5000) + '\n\n... (обрезано)' : text;
+              contentContainer.innerHTML = truncated;
+            } catch (e) {
+              contentContainer.innerHTML = `<span style="color:#A84342;">⚠️ ошибка загрузки</span>`;
+            }
+          }
+
+          // Поиск
+          searchInput.addEventListener('input', (e) => {
+            renderList(e.target.value);
           });
 
-          // 5. Автоматически открыть первый файл (опционально)
-          if (mdFiles.length > 0) {
+          // Первичный рендеринг
+          renderList();
+          // Автоматически открыть первый файл
+          if (allItems.length > 0) {
             const firstItem = listContainer.querySelector('.repo-item');
             if (firstItem) firstItem.click();
           }
@@ -500,6 +554,5 @@
 
     })();
   </script>
-
 </body>
 </html>
