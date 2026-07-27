@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
     <title>Нео-Брутализм · MORAITTI</title>
     <style>
         /* ===== ГЛОБАЛЬНЫЙ СБРОС ===== */
@@ -114,7 +114,7 @@
             min-height: 25vh;
         }
 
-        /* ===== СЦЕНА 6 – ГИТХАБ (УВЕЛИЧЕННАЯ) ===== */
+        /* ===== СЦЕНА 6 – ГИТХАБ ===== */
         .scene:nth-child(6) {
             min-height: 120vh;
             padding: 2vw 2vw 4vw 2vw;
@@ -219,7 +219,7 @@
             border-color: #B3FF66;
         }
 
-        /* ===== ГИТХАБ-СПИСОК (УВЕЛИЧЕННЫЙ) ===== */
+        /* ===== ГИТХАБ-СПИСОК ===== */
         #repo-list {
             margin-top: 1.5rem;
             font-weight: 300;
@@ -250,6 +250,7 @@
             gap: 0.8rem;
             font-size: 1rem;
             border-left: 3px solid transparent;
+            -webkit-tap-highlight-color: rgba(179, 255, 102, 0.2);
         }
         .repo-item:hover {
             color: #B3FF66;
@@ -267,7 +268,7 @@
             text-transform: none;
         }
 
-        /* ===== СОДЕРЖИМОЕ СТАТЬИ (УВЕЛИЧЕННОЕ, ЧИТАЕМОЕ) ===== */
+        /* ===== СОДЕРЖИМОЕ СТАТЬИ ===== */
         #article-content {
             font-weight: 300;
             letter-spacing: 0.5px;
@@ -416,6 +417,8 @@
             margin-top: 1.2rem;
             font-family: 'Courier New', monospace;
             font-size: 1rem;
+            -webkit-appearance: none;
+            border-radius: 0;
         }
         #searchInput:focus {
             outline: none;
@@ -427,7 +430,6 @@
             opacity: 0.6;
         }
 
-        /* ===== СЧЁТЧИК ФАЙЛОВ ===== */
         .repo-counter {
             font-size: 0.8rem;
             opacity: 0.4;
@@ -492,33 +494,102 @@
             }
             .block {
                 padding: 3vw;
-                min-height: 25vh;
+                min-height: 20vh !important;
             }
             .scene:nth-child(6) .block:first-child {
-                min-height: 45vh;
+                min-height: 40vh !important;
             }
             .scene:nth-child(6) .block:last-child {
-                min-height: 50vh;
+                min-height: 45vh !important;
                 padding: 3vw;
             }
             #repo-list {
                 max-height: 30vh;
+                font-size: 0.9rem;
+                line-height: 2.4;
+            }
+            #article-content {
+                max-height: 35vh;
+                font-size: 0.9rem;
+                line-height: 1.7;
+                padding: 0.5rem;
+            }
+            #searchInput {
+                font-size: 0.9rem;
+                padding: 0.6rem;
+            }
+            .repo-item {
+                font-size: 0.9rem;
+                padding: 0.5rem 0.6rem;
+            }
+            .brutal-text {
+                font-size: clamp(1.8rem, 10vw, 3rem) !important;
+            }
+            .meta {
+                font-size: 0.7rem;
+            }
+            #article-content h1 {
+                font-size: 1.4rem;
+            }
+            #article-content h2 {
+                font-size: 1.2rem;
+            }
+            #article-content h3 {
+                font-size: 1.1rem;
+            }
+            #article-content p,
+            #article-content li,
+            #article-content blockquote {
+                font-size: 0.9rem;
+            }
+            .footer {
+                padding: 2rem 1rem;
+                letter-spacing: 4px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .block {
+                padding: 4vw;
+                min-height: 15vh !important;
+            }
+            .scene:nth-child(6) .block:first-child {
+                min-height: 35vh !important;
+            }
+            .scene:nth-child(6) .block:last-child {
+                min-height: 40vh !important;
+                padding: 4vw;
+            }
+            #repo-list {
+                max-height: 25vh;
                 font-size: 0.8rem;
                 line-height: 2.2;
             }
             #article-content {
-                max-height: 35vh;
+                max-height: 30vh;
                 font-size: 0.8rem;
-                line-height: 1.6;
-                padding: 0.5rem;
+                padding: 0.4rem;
             }
             #searchInput {
-                font-size: 0.85rem;
-                padding: 0.6rem;
+                font-size: 0.8rem;
+                padding: 0.5rem;
             }
             .repo-item {
-                font-size: 0.85rem;
-                padding: 0.4rem 0.6rem;
+                font-size: 0.8rem;
+                padding: 0.4rem 0.5rem;
+            }
+            .brutal-text {
+                font-size: clamp(1.5rem, 8vw, 2.5rem) !important;
+            }
+        }
+
+        /* Отключаем курсор на тач-устройствах */
+        @media (hover: none) and (pointer: coarse) {
+            #cursor {
+                display: none !important;
+            }
+            body {
+                cursor: default !important;
             }
         }
     </style>
@@ -605,7 +676,7 @@
         </div>
     </section>
 
-    <!-- ===== СЦЕНА 6 – ГИТХАБ (УВЕЛИЧЕННАЯ, ЧИТАЕМАЯ) ===== -->
+    <!-- ===== СЦЕНА 6 – ГИТХАБ (АДАПТИВНАЯ) ===== -->
     <section class="scene" style="border-bottom:4px solid #2a2a2a; background:#0d0d0d;">
         <div class="block">
             <div class="brutal-text" style="font-size:clamp(1.8rem,4vw,3rem);">РЕПОЗИТОРИЙ</div>
@@ -637,47 +708,53 @@
         (function() {
             "use strict";
 
-            // ---- 1. КУРСОР ----
+            // ---- 1. КУРСОР (отключается на тач-устройствах через CSS) ----
             const cursor = document.getElementById('cursor');
-            document.addEventListener('mousemove', (e) => {
-                cursor.style.left = e.clientX + 'px';
-                cursor.style.top = e.clientY + 'px';
-            });
-
-            document.querySelectorAll('.block').forEach(block => {
-                block.addEventListener('mouseenter', () => {
-                    cursor.style.width = '180px';
-                    cursor.style.height = '180px';
-                    cursor.style.background = 'radial-gradient(circle, rgba(168,67,66,0.4), transparent 70%)';
+            if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
+                cursor.style.display = 'none';
+            } else {
+                document.addEventListener('mousemove', (e) => {
+                    cursor.style.left = e.clientX + 'px';
+                    cursor.style.top = e.clientY + 'px';
                 });
-                block.addEventListener('mouseleave', () => {
-                    cursor.style.width = '60px';
-                    cursor.style.height = '60px';
-                    cursor.style.background = 'radial-gradient(circle, rgba(179,255,102,0.25), transparent 70%)';
-                });
-            });
 
-            // ---- 2. ПАРАЛЛАКС ----
-            const scenes = document.querySelectorAll('.scene');
-            let ticking = false;
-            window.addEventListener('scroll', () => {
-                if (!ticking) {
-                    window.requestAnimationFrame(() => {
-                        const scrollY = window.scrollY;
-                        scenes.forEach((scene, i) => {
-                            const speed = 0.05 + (i * 0.02);
-                            const offset = scrollY * speed;
-                            const blocks = scene.querySelectorAll('.block');
-                            blocks.forEach((block, j) => {
-                                const dir = (j % 2 === 0) ? 1 : -1;
-                                block.style.transform = `translateY(${offset * dir * 0.3}px)`;
-                            });
-                        });
-                        ticking = false;
+                document.querySelectorAll('.block').forEach(block => {
+                    block.addEventListener('mouseenter', () => {
+                        cursor.style.width = '180px';
+                        cursor.style.height = '180px';
+                        cursor.style.background = 'radial-gradient(circle, rgba(168,67,66,0.4), transparent 70%)';
                     });
-                    ticking = true;
-                }
-            });
+                    block.addEventListener('mouseleave', () => {
+                        cursor.style.width = '60px';
+                        cursor.style.height = '60px';
+                        cursor.style.background = 'radial-gradient(circle, rgba(179,255,102,0.25), transparent 70%)';
+                    });
+                });
+            }
+
+            // ---- 2. ПАРАЛЛАКС (отключаем на мобильных для производительности) ----
+            if (window.innerWidth > 768) {
+                const scenes = document.querySelectorAll('.scene');
+                let ticking = false;
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        window.requestAnimationFrame(() => {
+                            const scrollY = window.scrollY;
+                            scenes.forEach((scene, i) => {
+                                const speed = 0.05 + (i * 0.02);
+                                const offset = scrollY * speed;
+                                const blocks = scene.querySelectorAll('.block');
+                                blocks.forEach((block, j) => {
+                                    const dir = (j % 2 === 0) ? 1 : -1;
+                                    block.style.transform = `translateY(${offset * dir * 0.3}px)`;
+                                });
+                            });
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                });
+            }
 
             // ---- 3. ОБРУШЕНИЕ ----
             document.getElementById('collapseBtn').addEventListener('click', function() {
@@ -724,7 +801,8 @@
             setInterval(updateClock, 1000);
             updateClock();
 
-            // ---- 6. ДИНАМИЧЕСКАЯ ТИПОГРАФИКА ----
+            // ---- 6. ДИНАМИЧЕСКАЯ ТИПОГРАФИКА (реже на мобильных) ----
+            const typoInterval = window.innerWidth <= 600 ? 12000 : 8000;
             setInterval(() => {
                 const texts = document.querySelectorAll('.brutal-text');
                 texts.forEach(el => {
@@ -732,9 +810,10 @@
                         el.style.letterSpacing = (Math.random() * 10 - 5) + 'px';
                     }
                 });
-            }, 8000);
+            }, typoInterval);
 
-            // ---- 7. ТАНЦУЮЩИЕ ГЛИФЫ ----
+            // ---- 7. ТАНЦУЮЩИЕ ГЛИФЫ (реже на мобильных) ----
+            const glyphInterval = window.innerWidth <= 600 ? 8000 : 5000;
             setInterval(() => {
                 const glyphs = document.querySelectorAll('.glyph');
                 glyphs.forEach(g => {
@@ -742,7 +821,7 @@
                     g.textContent = symbols[Math.floor(Math.random() * symbols.length)];
                     g.style.transform = `rotate(${Math.random()*60-30}deg)`;
                 });
-            }, 5000);
+            }, glyphInterval);
 
             // ---- 8. ЗАГРУЗКА РЕПОЗИТОРИЯ С РЕНДЕРИНГОМ MARKDOWN ----
             (async function loadRepo() {
@@ -759,11 +838,9 @@
                 let allItems = [];
                 let currentFile = null;
 
-                // ---- Простой рендерер Markdown (с поддержкой изображений) ----
+                // ---- Простой рендерер Markdown ----
                 function renderMarkdown(text) {
                     if (!text) return '<span class="placeholder">пусто</span>';
-
-                    // Экранируем HTML
                     let html = text;
 
                     // Заголовки
@@ -771,7 +848,7 @@
                     html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
                     html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
 
-                    // Жирный и курсив
+                    // Жирный, курсив
                     html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
                     html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
                     html = html.replace(/__(.*?)__/g, '<strong>$1</strong>');
@@ -785,14 +862,12 @@
                         return '<pre><code>' + code.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</code></pre>';
                     });
 
-                    // Ссылки [текст](url)
+                    // Ссылки
                     html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
 
                     // Изображения ![](url) или ![alt](url)
                     html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, function(match, alt, url) {
-                        // Если URL относительный, пробуем сделать его абсолютным
                         if (url.startsWith('./') || url.startsWith('../') || !url.startsWith('http')) {
-                            // Пробуем построить абсолютный URL из raw-адреса
                             const baseUrl =
                                 `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${branch}/`;
                             const cleanUrl = url.replace(/^\.\//, '').replace(/^\.\.\//, '');
@@ -809,7 +884,6 @@
                     html = html.replace(/^- (.*$)/gim, '<li>$1</li>');
                     html = html.replace(/^\* (.*$)/gim, '<li>$1</li>');
                     html = html.replace(/^\+ (.*$)/gim, '<li>$1</li>');
-                    // Нумерованные списки
                     html = html.replace(/^\d+\. (.*$)/gim, '<li>$1</li>');
 
                     // Оборачиваем списки (упрощённо)
@@ -820,14 +894,10 @@
                     html = html.replace(/^\*\*\*$/gim, '<hr />');
                     html = html.replace(/^___$/gim, '<hr />');
 
-                    // Абзацы: переносы строк в <p>
+                    // Абзацы
                     html = html.replace(/\n\n/g, '</p><p>');
                     html = '<p>' + html + '</p>';
-
-                    // Убираем пустые <p></p>
                     html = html.replace(/<p>\s*<\/p>/g, '');
-
-                    // Чиним списки: убираем лишние <p> внутри <li>
                     html = html.replace(/<li><p>/g, '<li>');
                     html = html.replace(/<\/p><\/li>/g, '</li>');
 
@@ -856,21 +926,20 @@
                     listContainer.innerHTML = html;
                     repoCounter.textContent = `${filtered.length} файл${filtered.length !== 1 ? 'ов' : ''}`;
 
-                    // Перепривязываем обработчики
                     listContainer.querySelectorAll('.repo-item').forEach(el => {
                         el.addEventListener('click', loadArticle);
                     });
 
-                    // Если есть фильтр, подсвечиваем первый элемент
-                    if (filtered.length > 0) {
+                    // Если есть фильтр, открываем первый, если ещё нет активного
+                    if (filtered.length > 0 && !currentFile) {
                         const first = listContainer.querySelector('.repo-item');
-                        if (first && !currentFile) {
-                            first.click();
+                        if (first) {
+                            setTimeout(() => first.click(), 100);
                         }
                     }
                 }
 
-                // ---- Загрузка и рендеринг статьи ----
+                // ---- Загрузка и рендеринг статьи (без автопрокрутки) ----
                 async function loadArticle() {
                     const url = this.dataset.url;
                     const name = this.dataset.name;
@@ -883,12 +952,10 @@
                         const res = await fetch(url);
                         if (!res.ok) throw new Error('Не удалось загрузить');
                         const text = await res.text();
-
-                        // Проверяем, есть ли в тексте изображения — если да, показываем их
                         const rendered = renderMarkdown(text);
                         contentContainer.innerHTML = rendered;
 
-                        // Подсвечиваем активный элемент в списке
+                        // Подсветка активного элемента
                         listContainer.querySelectorAll('.repo-item').forEach(el => {
                             el.style.borderLeftColor = 'transparent';
                             el.style.background = 'transparent';
@@ -897,6 +964,8 @@
                                 el.style.background = 'rgba(179,255,102,0.05)';
                             }
                         });
+
+                        // Автопрокрутка УДАЛЕНА – пользователь остаётся на месте
 
                     } catch (e) {
                         contentContainer.innerHTML =
@@ -908,11 +977,6 @@
                 searchInput.addEventListener('input', (e) => {
                     const val = e.target.value;
                     renderList(val);
-                    // Если после фильтрации что-то осталось — открываем первый
-                    const first = listContainer.querySelector('.repo-item');
-                    if (first && !first.dataset.name === currentFile) {
-                        // Не открываем автоматически, чтобы не сбивать с толку
-                    }
                 });
 
                 // ---- Загрузка данных из GitHub ----
@@ -950,12 +1014,11 @@
 
                     renderList();
 
-                    // Если есть файлы и ничего не выбрано — открываем первый
+                    // Если ничего не выбрано – открываем первый (без автопрокрутки)
                     if (allItems.length > 0 && !currentFile) {
                         const firstItem = listContainer.querySelector('.repo-item');
                         if (firstItem) {
-                            // Небольшая задержка для рендеринга
-                            setTimeout(() => firstItem.click(), 100);
+                            setTimeout(() => firstItem.click(), 150);
                         }
                     }
 
@@ -964,9 +1027,6 @@
                         `<div style="color:#A84342; padding:0.5rem 0;">⚠️ ${error.message}</div>`;
                     repoCounter.textContent = 'ошибка';
                 }
-
-                // ---- Клик по списку для повторной загрузки ----
-                // (уже привязано в renderList)
 
             })();
 
