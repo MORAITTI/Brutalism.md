@@ -4,7 +4,7 @@
 
 | Section | Description |
 |---|---|
-| [BRUTALISM.md](index.html) | RAW CONCRETE
+| [BRUTALISM.md](https://moraitti.github.io/Brutalism.md/) | RAW CONCRETE
 | [Brutalism](Brutalism/Brutalism.md) | Core overview of brutalism in architecture |
 | [Brutalism in Moscow Architecture](Brutalism%20in%20Moscow%20architecture/10%20buildings.md) | 10 key brutalist buildings in Moscow |
 | [Soviet Brutalism](Soviet%20Brutalism/Soviet%20Modernism.md) | Soviet modernism and its brutalist legacy |
