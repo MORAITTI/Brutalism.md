@@ -29,12 +29,27 @@
             line-height: 1;
             cursor: none;
             overflow-x: hidden;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.12'/%3E%3C/svg%3E");
+        }
+
+        /* Шумовой оверлей: фиксированный слой с собственной GPU-слоистостью,
+           не перерисовывается вместе со скроллом страницы.
+           numOctaves снижен с 5 до 2 — экспоненциально меньше работы для рендерера. */
+        #noise-overlay {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9998;
+            will-change: transform;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.12'/%3E%3C/svg%3E");
         }
 
         /* ===== КАСТОМНЫЙ КУРСОР ===== */
         #cursor {
             position: fixed;
+            left: 0;
+            top: 0;
             width: 60px;
             height: 60px;
             border-radius: 50%;
@@ -42,7 +57,8 @@
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: screen;
-            transform: translate(-50%, -50%);
+            /* transform управляется через JS; will-change переводит элемент на отдельный GPU-слой */
+            will-change: transform;
             transition: width 0.15s, height 0.15s, background 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -65,7 +81,11 @@
             border: 2px solid #2e2e2e;
             position: relative;
             overflow: hidden;
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s;
+            /* Убран transition: transform — параллакс обновляет transform каждый rAF-фрейм,
+               и наличие CSS-перехода запускало новый 0.4s transition при каждом скролле.
+               Collapse-эффект задаёт transition инлайново и в этом не нуждается. */
+            transition: background 0.2s;
+            will-change: transform;
             min-height: 40vh;
             display: flex;
             flex-direction: column;
@@ -596,6 +616,9 @@
 </head>
 <body>
 
+    <!-- Шумовой оверлей: фиксированный GPU-слой, не перерисовывается при скролле -->
+    <div id="noise-overlay"></div>
+
     <div id="cursor"></div>
 
     <!-- СЦЕНА 1 -->
@@ -713,9 +736,21 @@
             if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
                 cursor.style.display = 'none';
             } else {
+                // Используем transform вместо left/top — только compositing, без layout recalculation.
+                // rAF гарантирует максимум одно обновление за кадр.
+                let cursorRaf = false;
+                let cursorX = 0, cursorY = 0;
+                const cursorHalfSize = 30; // половина размера курсора по умолчанию (60px / 2)
                 document.addEventListener('mousemove', (e) => {
-                    cursor.style.left = e.clientX + 'px';
-                    cursor.style.top = e.clientY + 'px';
+                    cursorX = e.clientX;
+                    cursorY = e.clientY;
+                    if (!cursorRaf) {
+                        cursorRaf = true;
+                        requestAnimationFrame(() => {
+                            cursor.style.transform = `translate(${cursorX - cursorHalfSize}px, ${cursorY - cursorHalfSize}px)`;
+                            cursorRaf = false;
+                        });
+                    }
                 });
 
                 document.querySelectorAll('.block').forEach(block => {
@@ -973,10 +1008,12 @@
                     }
                 }
 
-                // ---- Поиск ----
+                // ---- Поиск (с дебаунсом — не перестраиваем DOM на каждый keystroke) ----
+                let searchTimer = null;
                 searchInput.addEventListener('input', (e) => {
+                    clearTimeout(searchTimer);
                     const val = e.target.value;
-                    renderList(val);
+                    searchTimer = setTimeout(() => renderList(val), 150);
                 });
 
                 // ---- Загрузка данных из GitHub ----
